@@ -10,7 +10,7 @@ var reportsDirectory = './test-results/reports-protractor'
 var dashboardReportDirectory = reportsDirectory + '/dashboardReport'
 
 module.exports.config = {
-  baseUrl: process.env.STF_URL || 'http://localhost:7100/#!/',
+  baseUrl: process.env.STF_URL || 'http://localhost:8100/#!/',
   suites: {
     control: 'e2e/control/**/*-spec.js',
     devices: 'e2e/devices/**/*-spec.js',
@@ -21,7 +21,7 @@ module.exports.config = {
   params: {
     login: {
       url: process.env.STF_LOGINURL || process.env.STF_URL ||
-      'http://localhost:7100',
+      'http://localhost:8100',
       username: process.env.STF_USERNAME || 'test_user',
       email: process.env.STF_EMAIL || 'test_user@login.local',
       password: process.env.STF_PASSWORD,
